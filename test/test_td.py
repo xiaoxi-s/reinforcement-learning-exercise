@@ -6,6 +6,7 @@ import numpy as np
 
 from envs.windy_gridworld import WindyGridworldEnv
 from lib.utils import make_epsilon_greedy_policy, EpisodeStats
+from lib import plotting
 from td import TemporalDifference
 
 """ This q-learning algorithm is used for testing and is implemented here: 
@@ -90,5 +91,5 @@ if __name__ == '__main__':
     # plotting.plot_episode_stats(stats)
 
     # verify: use q learning implemented by others
-    # Q, stats = q_learning_for_test(env, 500)
-    # plotting.plot_episode_stats(stats)
+    Q, stats = q_learning_for_test(env, 500)
+    plotting.plot_episode_stats(stats)
